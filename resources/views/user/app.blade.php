@@ -55,7 +55,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="{{ route('user.alamat') }}">Pengaturan Alamat</a>
-                                <a class="dropdown-item" href="#">Pengaturan Akun</a>
+                                <!-- <a class="dropdown-item" href="#">Pengaturan Akun</a> -->
                                 <a class="dropdown-item" href="#">
                                 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -135,7 +135,7 @@
     
     <footer class="site-footer border-top">
       <div class="container">
-        <div class="row">
+        <<!-- div class="row">
           <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="row">
               <div class="col-md-12">
@@ -175,7 +175,7 @@
               </ul>
             </div>
 
-            <div class="block-7">
+           <!--  <div class="block-7">
               <form action="#" method="post">
                 <label for="email_subscribe" class="footer-heading">Subscribe</label>
                 <div class="form-group">
@@ -183,9 +183,9 @@
                   <input type="submit" class="btn btn-sm btn-primary" value="Send">
                 </div>
               </form>
-            </div>
+            </div> -->
           </div>
-        </div>
+        </div> -->
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>

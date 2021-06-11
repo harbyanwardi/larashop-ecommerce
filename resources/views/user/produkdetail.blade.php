@@ -42,7 +42,11 @@
         </div>
 
         </div>
+        @if($produk->stok > 0)
         <p><button type="submit" class="buy-now btn btn-sm btn-primary">Add To Cart</button></p>
+        @else
+        <p>Produk telah habis</p>
+        @endif
         </form>
         </div>
     </div>

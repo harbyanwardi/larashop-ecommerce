@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
+    <title>Login Page</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('adminassets') }}/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ asset('adminassets') }}/assets/vendors/css/vendor.bundle.base.css">
@@ -25,9 +25,9 @@
           <div class="row flex-grow">
             <div class="col-lg-4 mx-auto">
               <div class="auth-form-light text-left p-5">
-                <div class="brand-logo">
+                <!-- <div class="brand-logo">
                   <img src="{{ asset('adminassets') }}/assets/images/logo.svg">
-                </div>
+                </div> -->
                 <h4>Halo! Selamat Datang</h4>
                 <h6 class="font-weight-light">Silahkan Login Untuk Melanjutkan.</h6>
                 <form class="pt-3" method="POST" action="{{ route('login') }}">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Jun 2021 pada 17.58
+-- Waktu pembuatan: 11 Jun 2021 pada 14.57
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -651,7 +651,8 @@ CREATE TABLE `detail_order` (
 --
 
 INSERT INTO `detail_order` (`id`, `order_id`, `product_id`, `qty`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, '2021-06-09 08:42:57', '2021-06-09 08:42:57');
+(1, 1, 1, 1, '2021-06-09 08:42:57', '2021-06-09 08:42:57'),
+(2, 2, 2, 2, '2021-06-11 05:50:01', '2021-06-11 05:50:01');
 
 -- --------------------------------------------------------
 
@@ -682,6 +683,13 @@ CREATE TABLE `keranjang` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `keranjang`
+--
+
+INSERT INTO `keranjang` (`id`, `user_id`, `products_id`, `qty`, `created_at`, `updated_at`) VALUES
+(4, 2, 2, 1, '2021-06-11 05:51:08', '2021-06-11 05:51:08');
 
 -- --------------------------------------------------------
 
@@ -749,7 +757,8 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`id`, `invoice`, `user_id`, `subtotal`, `no_resi`, `status_order_id`, `metode_pembayaran`, `ongkir`, `created_at`, `updated_at`, `biaya_cod`, `no_hp`, `bukti_pembayaran`, `pesan`) VALUES
-(1, 'ALV202106090342', 2, 120000, 'TRX123456789', 4, 'trf', 35000, '2021-06-09 08:42:57', '2021-06-09 08:49:40', 0, '08987843361', 'buktibayar/EDf4gkO5eGa0hakl3DVNQPcyP6AhB0wbEo1p6Vr7.png', 'harus dikirim');
+(1, 'ALV202106090342', 2, 120000, 'TRX123456789', 5, 'trf', 35000, '2021-06-09 08:42:57', '2021-06-11 05:43:28', 0, '08987843361', 'buktibayar/EDf4gkO5eGa0hakl3DVNQPcyP6AhB0wbEo1p6Vr7.png', 'harus dikirim'),
+(2, 'ALV202106111249', 2, 205000, NULL, 3, 'trf', 35000, '2021-06-11 05:50:01', '2021-06-11 05:50:53', 0, '08987843361', 'buktibayar/wtY4b2OK44dr0vftMBWUQ7IIpsYT7vqZ1eMdsHfF.png', 'tess');
 
 -- --------------------------------------------------------
 
@@ -787,7 +796,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `price`, `weigth`, `categories_id`, `created_at`, `updated_at`, `stok`) VALUES
-(1, 'Kaos JOKINGODING 90s', 'available size S-XXXL', 'imageproduct/GS5mz7YJax0ehgPdQYQHwG1DefPU3Vk8ONCq1IJl.png', 85000, 200, 1, '2021-06-09 08:01:10', '2021-06-09 08:01:10', 11);
+(1, 'Kaos JOKINGODING 90s', 'available size S-XXXL', 'imageproduct/GS5mz7YJax0ehgPdQYQHwG1DefPU3Vk8ONCq1IJl.png', 85000, 200, 1, '2021-06-09 08:01:10', '2021-06-09 08:01:10', 11),
+(2, 'Kaos Joki Python', 'available', 'imageproduct/ErH9xDwGj0cpjPq4dKqm2GeLCqVB4Sxb0Uki4KFD.png', 85000, 200, 1, '2021-06-11 05:48:39', '2021-06-11 05:48:39', 0);
 
 -- --------------------------------------------------------
 
@@ -913,7 +923,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@sport.com', NULL, '$2y$10$toKV6JHDdBUvvonKCp3yQebs339PQeMXWsNCFg/23kyAA5w2VrMyq', 'admin', NULL, NULL, NULL),
+(1, 'admin', 'admin@email.com', NULL, '$2y$10$toKV6JHDdBUvvonKCp3yQebs339PQeMXWsNCFg/23kyAA5w2VrMyq', 'admin', NULL, NULL, NULL),
 (2, 'Harby', 'anwardiharby@gmail.com', NULL, '$2y$10$L2ROJgvhGCnYOL/PjBc5RubMJZuipO4WhRj4UbWB3p9RwNpXow9sK', 'customer', NULL, '2021-06-09 07:57:03', '2021-06-09 07:57:03');
 
 --
@@ -1055,7 +1065,7 @@ ALTER TABLE `couriers`
 -- AUTO_INCREMENT untuk tabel `detail_order`
 --
 ALTER TABLE `detail_order`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -1067,7 +1077,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -1079,13 +1089,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `provinces`

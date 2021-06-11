@@ -1,12 +1,12 @@
 @extends('user.app')
 @section('content')
-<div class="site-blocks-cover" style="background-image: url({{ asset('shopper') }}/images/hero_1.jpg);" data-aos="fade">
+<div class="site-blocks-cover" style="background-image: url({{ asset('shopper') }}/images/clothes.jpg);" data-aos="fade">
     <div class="container">
     <div class="row align-items-start align-items-md-center justify-content-end">
         <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
-        <h1 class="mb-2">Cari Kebutuhan Olahraga Kamu Di Sini</h1>
+        <h1 class="mb-2">Cari Kebutuhan Kamu Di Sini</h1>
         <div class="intro-text text-center text-md-left">
-            <p class="mb-4">Alat olahraga disini terjamin kualitasnya dan tentunya barangnya juga original bukan kw. </p>
+            <p class="mb-4">Terjamin kualitasnya dan tentunya barangnya juga original bukan kw. </p>
             <p>
             <a href="{{ route('user.produk') }}" class="btn btn-sm btn-primary">Belanja Sekarang</a>
             </p>
@@ -18,7 +18,7 @@
 
 <div class="site-section site-section-sm site-blocks-1">
     <div class="container">
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="">
         <div class="icon mr-4 align-self-start">
             <span class="icon-truck"></span>
@@ -46,7 +46,7 @@
             <p>Kami menjamin keamanan dalam pengiriman barang sampai diterima oleh anda.</p>
         </div>
         </div>
-    </div>
+    </div> -->
     </div>
 </div>
 <div class="site-section block-3 site-blocks-2 bg-light"  data-aos="fade-up">
